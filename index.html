@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Felices 5 meses</title>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="contenedor">
+    <div class="texto">
+      <p><b>Para la niña mas bonita:</b></p>
+      <p>
+        Cuando estoy con vos el tiempo <br>
+        simplemente deja de correr. <br>
+        Te amo mucho, mi amor por vos llega <br>
+        al punto que me haces falta para vivir. <br>
+        Volveria a tomar las mismas <br>
+        decisiones otra vez para estar con vos <br>
+        porque no me arrepiento de nada <br>
+        todo me nace con vos y todo fluye. <br>
+        He amado estos 5 meses con vos y <br>
+        estoy ansioso por ver que viene en <br>
+        los proximos mil <br>
+        — Te amo demasiado princesa!_
+      </p>
+    </div>
+    <div class="imagen">
+      <img src="a5b8d100-916a-4216-99bb-d68246e655b5.png" alt="árbol en forma de corazón"/>
+    </div>
+  </div>
+
+  <div class="linea"></div>
+
+  <div class="contador">
+    <p>Esta bonita historia empezo antes pero oficialemente hace …</p>
+    <p id="tiempo"></p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+function createPetal() {
+  const petal = document.createElement("div");
+  petal.classList.add("petal");
+
+  // Posición horizontal aleatoria
+  petal.style.left = Math.random() * 100 + "vw";
+
+  // Duración y tamaño aleatorios
+  const size = Math.random() * 40 + 50;
+  petal.style.width = size + "px";
+  petal.style.height = size + "px";
+  petal.style.animationDuration = (Math.random() * 5 + 5) + "s";
+
+  document.body.appendChild(petal);
+
+  // Eliminar el pétalo cuando termine su animación
+  setTimeout(() => {
+    petal.remove();
+  }, 10000);
+}
+
+// Generar pétalos cada 300ms
+setInterval(createPetal, 800);
+</script>
+
+</body>
+</html>

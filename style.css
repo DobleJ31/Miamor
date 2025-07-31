@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fdebed;
+  font-family: 'Dancing Script', cursive;
+  color: #4b2e2e;
+  text-align: center;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 20px 20px;
+  flex-wrap: wrap;
+}
+
+.texto {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.imagen img {
+  position: relative;
+  top: 50px;
+  width: 280px;
+}
+
+.linea {
+  width: 80%;
+  height: 2px;
+  background-color: #4b2e2e;
+  margin: 20px auto;
+}
+
+.contador {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+#tiempo {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.petal {
+  position: fixed;
+  top: -10px;
+  width: 15px;
+  height: 15px;
+  background: url('CorazonL.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
